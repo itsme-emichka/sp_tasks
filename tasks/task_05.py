@@ -12,5 +12,5 @@ def date_in_future(days: int) -> datetime.datetime:
 
 
 if __name__ == '__main__':
-    print(date_in_future([]))  # => текущая дата
-    print(date_in_future(2))  # => текущая дата + 2 дня
+    print(date_in_future([]))
+    print(date_in_future(2))
