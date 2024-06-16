@@ -2,7 +2,7 @@ from typing import Any
 
 
 def is_palindrome(string: Any) -> bool:
-    if string is None:  # Можно обойтись и без этого условия
+    if string is None:
         return False
     if not isinstance(string, str):
         string = str(string)
