@@ -23,12 +23,10 @@ class Dessert:
 
     @calories.setter
     def calories(self, value: int) -> None:
-        if not isinstance(value, int):
-            raise Exception
         self._calories = value
 
     def is_healthy(self) -> bool:
-        return self._calories < 200
+        return isinstance(self._calories, int) and self._calories < 200
 
     def is_delicious(self) -> bool:
         return True
