@@ -26,7 +26,9 @@ class Dessert:
         self._calories = value
 
     def is_healthy(self) -> bool:
-        return isinstance(self._calories, int) and self._calories < 200
+        return (
+            isinstance(self._calories, (int, float)) and self._calories < 200
+        )
 
     def is_delicious(self) -> bool:
         return True
@@ -41,7 +43,7 @@ if __name__ == '__main__':
 
     print(dessert.calories)
     print(dessert.is_healthy())
-    dessert.calories = 300
+    dessert.calories = 199.9999
     print(dessert.calories)
     print(dessert.is_healthy())
 
